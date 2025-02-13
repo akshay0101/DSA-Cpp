@@ -18,7 +18,7 @@ void merge(vector<int>& arr, int left,
     for (int i = 0; i < n1; i++)
         L[i] = arr[left + i];
     for (int j = 0; j < n2; j++)
-        R[j] = arr[mid + 1 + j];
+        R[j] = arr[mid + 1 + j]; 
 
     int i = 0, j = 0;
     int k = left;
@@ -73,6 +73,16 @@ void printVector(vector<int>& arr)
     for (int i = 0; i < arr.size(); i++)
         cout << arr[i] << " ";
     cout << endl;
+}
+
+void iterativeMergeSort(vector<int>arr){
+
+    // we will call each element as a single list and then start merging all of them using merge algorithm
+    //{ 12, 11, 13, 5, 6, 7 };
+
+    //{11,12} {5,13} {6,7}
+    // {5,11,12,13} {6,7}
+    // {5,6,7,11,12,13}
 }
 
 // Driver code
